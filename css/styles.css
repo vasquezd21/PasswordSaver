@@ -1,0 +1,44 @@
+html{
+    font-size: 100%; /*lets users control the zoom level of their browser*/
+    box-sizing: border-box; /*makes the size elements include padding in the final widths*/
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+/* Global color vars */
+/* $darkBlue: hsl(233, 26%, 24%); */
+/* $limeGreen: hsl(136, 65%, 51%); */
+/* $brightCyan: hsl(192, 70%, 51%); */
+/* $grayishBlue: hsl(233, 8%, 62%); */
+/* $lightGrayishBlue: hsl(220, 16%, 96%); */
+/* $veryLightGray: hsl(0, 0%, 98%); */
+/* $white: hsl(0, 0%, 100%); */
+
+nav, nav::after, .navbar-item{
+    background-color: darkgray !important;
+    color: hsl(0,0%,98%) !important;
+}
+.navbar-item{
+    padding: 8px 128px !important;
+}
+
+a, a::before, a::after{
+     background-color: darkgray !important;
+}
+
+a:hover, .navbar-burger:hover{
+    color:hsl(192, 70%, 51%) !important;
+}
+
+
+#navMenu.navbar-menu.is-active{
+        background-color: darkgray !important;
+    }
+.center {
+  margin: auto;
+  width: 50%;
+  border: 0;
+  padding: 10px;
+}
