@@ -17,7 +17,7 @@ html{
 /* $white: hsl(0, 0%, 100%); */
 
 nav, nav::after, .navbar-item{
-    background-color: darkgray !important;
+    background-color: #212529 !important;
     color: hsl(0,0%,98%) !important;
 }
 .navbar-item{
@@ -29,7 +29,7 @@ nav, nav::after, .navbar-item{
 }
 
 a, a::before, a::after{
-     background-color: darkgray !important;
+     background-color: #212529 !important;
 }
 
 .navbar-burger:hover, a.navbar-item.is-active:hover{
@@ -39,7 +39,7 @@ a, a::before, a::after{
 
 
 #navMenu.navbar-menu.is-active{
-        background-color: darkgray !important;
+        background-color: #212529 !important;
     }
 .center {
   margin: auto;
