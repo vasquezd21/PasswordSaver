@@ -1,5 +1,7 @@
 console.log("view.js running!");
 
+var userId = sessionStorage.getItem("userId");
+
 const SHA512 = new Hashes.SHA512();
 
 const accessKeyInput = document.querySelector("#accessKeyInput");
@@ -25,7 +27,7 @@ submitBtn.addEventListener('click', (e) => {
         const hashedKey = SHA512.hex(accessKey);
         // check that hashed key matches with key in database
         // NOTE: this will return all passwords saved with the same access key
-        const dbRef = firebase.database().ref();
+        const dbRef = firebase.database().ref(`users/${userId}/data`);
         dbRef.on('value', (snapshot) => {
             let count = 0;
             const data = snapshot.val();
@@ -49,9 +51,9 @@ submitBtn.addEventListener('click', (e) => {
     } else {
         alert("Your access key must contain a capital letter and number");
     }
-});
+})
 
 const displayPassword = (info) => {
     const displayDiv = document.querySelector("#display");
     displayDiv.innerHTML = info.password;
-};
+}
